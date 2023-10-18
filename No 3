@@ -1,0 +1,29 @@
+public class BingoSong {
+    public BingoSong() {
+        for (int i = 5; i >= 0; i--) {
+            StringBuilder verse = new StringBuilder("There was a farmer who had a dog,\nAnd Bingo was his name-o.\n");
+
+            for (int j = 0; j < i; j++) {
+                for (int k = 0; k < 5; k++) {
+                    verse.append("(clap)-");
+                }
+                verse.append("O\n");
+            }
+
+            System.out.println(verse);
+
+            if (i > 0) {
+                for (int j = 0; j < 5 - i; j++) {
+                    verse.append("(clap)-(clap)-(clap)-(clap)-(clap)\n");
+                }
+            }
+
+            System.out.println(verse);
+        }
+    }
+
+    public static void main(String[] args) {
+        new BingoSong();
+    }
+}
+
